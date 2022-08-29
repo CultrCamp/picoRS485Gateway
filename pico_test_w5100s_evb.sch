@@ -5627,6 +5627,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
 <part name="+3V3" library="picoRS485Gateway" deviceset="+3V3" device=""/>
 <part name="P+4" library="picoRS485Gateway" deviceset="+5V" device=""/>
+<part name="GND4" library="picoRS485Gateway" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5748,6 +5749,9 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="P+4" gate="1" x="177.8" y="142.24" smashed="yes">
 <attribute name="VALUE" x="175.26" y="139.7" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="GND4" gate="1" x="180.34" y="76.2" smashed="yes">
+<attribute name="VALUE" x="177.8" y="73.66" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -5863,6 +5867,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="284.48" y1="226.06" x2="281.94" y2="226.06" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="226.06" x2="281.94" y2="203.2" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="203.2" x2="294.64" y2="203.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="180.34" y1="78.74" x2="180.34" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
